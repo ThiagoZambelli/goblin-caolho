@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import styles from './Footer.module.scss';
+import logo from 'assets/logoLithtleZ.svg';
 
 function Footer() {
   return (
-    <footer>
-        
+    <footer className={styles.footer}>
+        <img src={logo} alt="Logo da LithtleZ" />
     </footer>
   )
 }

@@ -1,12 +1,12 @@
 import React from 'react'
-import Nav from './Nav'
+import NavLithtleZ from './NavLithtleZ'
 import { Outlet } from 'react-router-dom'
 import Footer from './Footer'
 
 function PaginaComum() {
   return (
     <div>
-      <Nav />      
+      <NavLithtleZ />      
       <Outlet />
       <Footer />
     </div>

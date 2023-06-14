@@ -3,14 +3,18 @@ import Carrocel from 'componentes/Carrocel'
 import React from 'react'
 import useItensAleatorios from 'state/hooks/useItensAleatorios';
 import styles from './PaginaInicial.module.scss';
+import usePegaArmaduras from 'state/hooks/usePegaArmaduras';
 
 function PaginaInicio() {
-const listaTeste= useItensAleatorios();
+const itensDestaque = useItensAleatorios();
+const armaduras = usePegaArmaduras();
+console.log(armaduras)
 
   return (
     <main className={styles.paginaInicial}>
         <Banner />
-        <Carrocel cards={listaTeste} titulo='Itens em destaque' />
+        <Carrocel cards={itensDestaque} titulo='Itens em destaque' />
+        <Carrocel invertido={false} cards={armaduras} titulo='Melhores Armaduras' />
     </main>
   )
 }

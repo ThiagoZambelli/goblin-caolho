@@ -58,6 +58,78 @@
       "nome": "Armor of Vulnerability",
       "titulo": "Armor (plate), rare (requires attunement)",
       "descricao": "While wearing this armor, you have resistance to one type of damage, but you have vulnerability to another type of damage. The GM chooses the resistances and vulnerabilities from the following options:\n\n- Resistances: acid, cold, fire, force, lightning, necrotic, poison, psychic, radiant, thunder\n- Vulnerabilities: acid, cold, fire, force, lightning, necrotic, poison, psychic, radiant, thunder"
-    }
+    },
+    {
+      "id": 11,
+      "nome": "Arrow-Catching Shield",
+      "titulo": "Armor (shield), rare (requires attunement)",
+      "descricao": "You gain a +2 bonus to AC against ranged attacks while you wield this shield. This bonus is in addition to the shield’s normal bonus to AC. In addition, whenever an attacker makes a ranged attack against a target within 5 feet of you, you can use your reaction to become the target of the attack instead."
+    },
+    {
+      "id": 12,
+      "nome": "Arrow of Slaying",
+      "titulo": "Weapon (arrow), very rare",
+      "descricao": "An arrow of slaying is a magic weapon meant to slay a particular kind of creature. Some are more focused than others; for example, there are both arrows of dragon slaying and arrows of blue dragon slaying. If a creature belonging to the type, race, or group associated with an arrow of slaying takes damage from the arrow, the creature must make a DC 17 Constitution saving throw, taking an extra 6d10 piercing damage on a failed save, or half as much extra damage on a successful one.\n\nOnce an arrow of slaying deals its extra damage to a creature, it becomes a nonmagical arrow.\n\nOther types of magic ammunition of this kind exist, such as bolts of slaying meant for a crossbow, though arrows are most common."
+    },
+    {
+      "id": 13,
+      "nome": "Bead of Force",
+      "titulo": "Wondrous item, rare",
+      "descricao": "This small black sphere measures 3/4 of an inch in diameter and weighs an ounce. Typically, 1d4 + 4 beads of force are found together.\n\nYou can use an action to throw the bead up to 60 feet. The bead explodes on impact and is destroyed. Each creature within a 10-foot radius of where the bead landed must succeed on a DC 15 Dexterity saving throw or take 5d4 force damage. A sphere of transparent force then encloses the area for 1 minute. Any creature that failed the save and is completely within the area is trapped inside this sphere. Creatures that succeeded on the save, or are partially within the area, are pushed away from the center of the sphere until they are no longer inside it. Only breathable air can pass through the sphere’s wall. No attack or other effect can.\n\nAn enclosed creature can use its action to push against the sphere’s wall, moving the sphere up to half the creature’s walking speed. The sphere can be picked up, and its magic causes it to weigh only 1 pound, regardless of the weight of creatures inside."
+    },
+    {
+      "id": 14,
+      "nome": "Boots of Speed",
+      "titulo": "Wondrous item, rare (requires attunement)",
+      "descricao": "While you wear these boots, you can use a bonus action and click the boots’ heels together. If you do, the boots double your walking speed, and any creature that makes an opportunity attack against you has disadvantage on the attack roll. If you click your heels together again, you end the effect. When the boots’ property has been used for a total of 10 minutes, the magic ceases to function until you finish a long rest."
+    },
+    {
+      "id": 15,
+      "nome": "Boots of Striding and Springing",
+      "titulo": "Wondrous item, uncommon (requires attunement)",
+      "descricao": "While you wear these boots, your walking speed becomes 30 feet, unless your walking speed is higher, and your speed isn’t reduced if you are encumbered or wearing heavy armor. In addition, you can jump three times the normal distance, though you can’t jump farther than your remaining movement would allow."
+    },
+    {
+      "id": 16,
+      "nome": "Boots of the Winterlands",
+      "titulo": "Wondrous item, uncommon (requires attunement)",
+      "descricao": "These furred boots are snug and feel quite warm. While you wear them, you gain the following benefits:\n\n- You have resistance to cold damage.\n- You ignore difficult terrain created by ice or snow.\n- You can tolerate temperatures as low as −50 degrees Fahrenheit without any additional protection. If you wear heavy clothes, you can tolerate temperatures as low as −100 degrees Fahrenheit."
+    },
+    {
+      "id": 17,
+      "nome": "Bowl of Commanding Water Elementals",
+      "titulo": "Wondrous item, rare",
+      "descricao": "While this bowl is filled with water, you can use an action to speak the bowl’s command word and summon a water elemental, as if you had cast the conjure elemental spell. The bowl can’t be used this way again until the next dawn. The bowl is about 1 foot in diameter and half as deep. It weighs 3 pounds and holds about 3 gallons."
+      },
+      {
+      "id": 18,
+      "nome": "Bracers of Archery",
+      "titulo": "Wondrous item, uncommon (requires attunement)",
+      "descricao": "While wearing these bracers, you have proficiency with the longbow and shortbow, and you gain a +2 bonus to damage rolls on ranged attacks made with such weapons."
+      },
+      {
+      "id": 19,
+      "nome": "Bracers of Defense",
+      "titulo": "Wondrous item, rare (requires attunement)",
+      "descricao": "While wearing these bracers, you gain a +2 bonus to AC if you are wearing no armor and using no shield."
+      },
+      {
+      "id": 20,
+      "nome": "Brazier of Commanding Fire Elementals",
+      "titulo": "Wondrous item, rare",
+      "descricao": "While a fire burns in this brass brazier, you can use an action to speak the brazier’s command word and summon a fire elemental, as if you had cast the conjure elemental spell. The brazier can’t be used this way again until the next dawn. The brazier weighs 5 pounds."
+      },
+      {
+      "id": 21,
+      "nome": "Brooch of Shielding",
+      "titulo": "Wondrous item, uncommon (requires attunement)",
+      "descricao": "While wearing this brooch, you have resistance to force damage, and you have immunity to damage from the magic missile spell."
+      },
+      {
+      "id": 22,
+      "nome": "Broom of Flying",
+      "titulo": "Wondrous item, uncommon",
+      "descricao": "This wooden broom, which weighs 3 pounds, functions like a mundane broom until you stand astride it and speak its command word. It then hovers beneath you and can be ridden in the air. It has a flying speed of 50 feet. It can carry up to 400 pounds, but its flying speed becomes 30 feet while carrying over 200 pounds. The broom stops hovering when you land. You can send the broom to travel alone to a destination within 1 mile of you if you speak the command word, name the location, and are familiar with that place. The broom comes back to you when you speak another command word, provided that the broom is still within 1 mile of you."
+      }
   ]
   
