@@ -6,7 +6,7 @@ import Footer from './Footer'
 function PaginaComum() {
   return (
     <div>
-      <Nav />
+      <Nav />      
       <Outlet />
       <Footer />
     </div>

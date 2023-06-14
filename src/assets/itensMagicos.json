@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "nome": "Adamantine Armor",
+      "titulo": "Armor (medium or heavy, but not hide)",
+      "descricao": "This suit of armor is reinforced with adamantine, one of the hardest substances in existence. While you're wearing it, any critical hit against you becomes a normal hit."
+    },
+    {
+      "id": 2,
+      "nome": "Ammunition, +1, +2, or +3",
+      "titulo": "Weapon (any ammunition)",
+      "descricao": "You have a bonus to attack and damage rolls made with this piece of magic ammunition. The bonus is determined by the rarity of the ammunition. Once it hits a target, the ammunition is no longer magical."
+    },
+    {
+      "id": 3,
+      "nome": "Amulet of Health",
+      "titulo": "Wondrous item, rare (requires attunement)",
+      "descricao": "Your Constitution score is 19 while you wear this amulet. It has no effect on you if your Constitution is already 19 or higher."
+    },
+    {
+      "id": 4,
+      "nome": "Amulet of Proof against Detection and Location",
+      "titulo": "Wondrous item, uncommon (requires attunement)",
+      "descricao": "While wearing this amulet, you are hidden from divination magic. You can't be targeted by such magic or perceived through magical scrying sensors."
+    },
+    {
+      "id": 5,
+      "nome": "Amulet of the Planes",
+      "titulo": "Wondrous item, very rare (requires attunement)",
+      "descricao": "While wearing this amulet, you can use an action to name a location that you are familiar with on another plane of existence. Then make a DC 15 Intelligence check. On a successful check, you cast the plane shift spell. On a failure, you and each creature and object within 15 feet of you travel to a random destination. Roll a d100. On a 1–60, you travel to a random location on the plane you named. On a 61–100, you travel to a randomly determined plane of existence."
+    },
+    {
+      "id": 6,
+      "nome": "Animated Shield",
+      "titulo": "Armor (shield), very rare (requires attunement)",
+      "descricao": "While holding this shield, you can speak its command word as a bonus action to cause it to animate. The shield leaps into the air and hovers in your space to protect you as if you were wielding it, leaving your hands free. The shield remains animated for 1 minute, until you use a bonus action to end this effect, or until you are incapacitated or die, at which point the shield falls to the ground or into your hand if you have one free."
+    },
+    {
+      "id": 7,
+      "nome": "Apparatus of the Crab",
+      "titulo": "Wondrous item, legendary",
+      "descricao": "This item first appears to be a Large sealed iron barrel weighing 500 pounds. The barrel has a hidden catch, which can be found with a successful DC 20 Intelligence (Investigation) check. Releasing the catch unlocks a hatch at one end of the barrel, allowing two Medium or smaller creatures to crawl inside. Ten levers are set in a row at the far end, each in a neutral position, able to move either up or down. When certain levers are used, the apparatus transforms to resemble a giant lobster or similar crustacean, or a crab 30 feet long.\n\nThe apparatus of the crab is a Large object with the following statistics:\n\n- Armor Class: 20\n- Hit Points: 200\n- Speed: 30 ft., swim 30 ft.\n\nIt has a 120-foot darkvision range and is blind beyond that distance. It communicates by means of telepathy.\n\nThe apparatus can carry up to four creatures. It can be opened and closed from the inside by an action. A hatch that is closed is obviously locked.\n\nThe apparatus of the crab can remain underwater indefinitely and grants its passengers advantage on Strength (Athletics) checks made to swim.\n\nIt takes an action to activate the apparatus’s air supply, which lasts for 1 hour, divvying up its capacity in minute increments. When the apparatus is active, one minute of air is consumed each minute by each breathing creature inside it (two minutes if the creature is holding its breath). When 10 minutes of air remain, the apparatus sounds a warning gong that can be heard by creatures within a 60-foot radius. Once all its air is consumed, the apparatus can’t be used again until it is supplied with fresh air (requiring access to the surface or sufficient air to refill it) for 1 hour.\n\nWhile inside the apparatus beneath the water’s surface, passengers are immune to poison damage and have resistance against poison damage from inhaled sources. They can breathe underwater and have a swimming speed equal to the apparatus’s speed."
+    },
+    {
+      "id": 8,
+      "nome": "Armor of Invulnerability",
+      "titulo": "Armor (plate), legendary (requires attunement)",
+      "descricao": "You have resistance to nonmagical damage while you wear this armor. Additionally, you can use an action to make yourself immune to nonmagical damage for 10 minutes or until you are no longer wearing the armor. Once this special action is used, it can't be used again until the next dawn."
+    },
+    {
+      "id": 9,
+      "nome": "Armor of Resistance",
+      "titulo": "Armor (light, medium, or heavy), rare",
+      "descricao": "You have resistance to one type of damage while you wear this armor. The GM chooses the type or determines it randomly from the options below:\n\n- Acid\n- Cold\n- Fire\n- Force\n- Lightning\n- Necrotic\n- Poison\n- Psychic\n- Radiant\n- Thunder"
+    },
+    {
+      "id": 10,
+      "nome": "Armor of Vulnerability",
+      "titulo": "Armor (plate), rare (requires attunement)",
+      "descricao": "While wearing this armor, you have resistance to one type of damage, but you have vulnerability to another type of damage. The GM chooses the resistances and vulnerabilities from the following options:\n\n- Resistances: acid, cold, fire, force, lightning, necrotic, poison, psychic, radiant, thunder\n- Vulnerabilities: acid, cold, fire, force, lightning, necrotic, poison, psychic, radiant, thunder"
+    }
+  ]
+  

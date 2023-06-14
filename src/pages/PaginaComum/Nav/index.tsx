@@ -1,40 +1,54 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from 'assets/logoLithtleZ.svg';
 import styles from './Nav.module.scss';
 import { Link } from 'react-router-dom';
 import usePegaLogado from 'state/hooks/usePegaLogado';
 import LinkNav from './LinkNav';
-import {RxAvatar} from 'react-icons/rx'
+import { RxAvatar } from 'react-icons/rx'
+import { LzModal } from 'lithtlez-ds';
 
 
 function Nav() {
 
+    const [modalAerto, setModalAerto] = useState(false);
+    const [navAberto, setNavAberto] = useState(false)
+
+    const abrirNav = () => {
+        setNavAberto(!navAberto)
+    }
+
     const clicar = () => {
-        console.log('ja cliquei')
+        setModalAerto(!modalAerto)
     }
     const logado = usePegaLogado();
 
     return (
-        <header className={styles.header}>
-            <h1>
-                <img src={logo} alt='Logo do LiththleZ' />
-            </h1>
-            <nav>
-                <div className={styles.header__links}>
-                    <LinkNav to='https://novo-projeto-solo-react-ts.vercel.app/' id='forjaDeLendas'  nome='Forja de Lendas' />
-                    <LinkNav to='/' id='goblinCaolho'  nome='Goblin Caolho' />
-                    <LinkNav to='#' id='favoritos'  nome='Favoritos' />                    
-                </div>
-                {logado
-                    ? <div>
-                        <Link to={"#"}>Meu perfil</Link>
+        <div className={styles.topo}>
+            <header className={`${styles.header} ${navAberto ? styles.header__aberto : ''}`}>
+                <h1>
+                    <img src={logo} alt='Logo do LiththleZ' />
+                    <button className={styles.topo__btn} onClick={abrirNav}>Menu</button>
+                </h1>
+                <nav>
+                    <div className={styles.header__links}>
+                        <LinkNav to='https://novo-projeto-solo-react-ts.vercel.app/' id='forjaDeLendas' nome='Forja de Lendas' />
+                        <LinkNav to='/' id='goblinCaolho' nome='Goblin Caolho' />
+                        <LinkNav to='#' id='favoritos' nome='Favoritos' />
                     </div>
-                    : <div>
-                        <button><RxAvatar /> Logar</button>
-                    </div>
-                }
-            </nav>
-        </header>
+                    {logado
+                        ? <div>
+                            <Link to={"#"}>Meu perfil</Link>
+                        </div>
+                        : <div>
+                            <button onClick={clicar}><RxAvatar /> Logar</button>
+                        </div>
+                    }
+                    {modalAerto
+                        ? <LzModal titulo='Pipoca' children={<div>Pipoca</div>} aberta={modalAerto} aoFechar={clicar} />
+                        : ''}
+                </nav>
+            </header>                     
+        </div>
     )
 }
 
