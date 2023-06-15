@@ -1,7 +1,10 @@
+@import 'styles/_variaveis.module.scss';
+
 .titulo{
     text-align: center;
     font-size: 2rem;
     padding: 1em 0;
+    color: $color-theme-1-hex;
 }
 .carrocelContainer{
     padding: 2rem 0;

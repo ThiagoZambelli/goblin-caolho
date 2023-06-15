@@ -7,8 +7,8 @@ function Banner() {
     
   return (
     <section className={styles.banner}>
-        <LzInput label='O que Procura?'  value={value} onChange={(event)=>{setValue(event)}} />
-        <LzBotao children='Buscar'  fSize={12}/>
+        <LzInput label='O que Procura?' corPrimaria='#26100E' corSecundaria='#B69E7C' value={value} onChange={(event)=>{setValue(event)}} />
+        <LzBotao children='Buscar' corHover='#161B21' corPrimaria='#26100E' corSecundaria='#B69E7C'  fSize={12}/>
     </section>
   )
 }

@@ -1,5 +1,32 @@
+@import 'styles/_variaveis.module.scss';
+
 .footer{
+    background-color: $color-theme-4-hex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-theme-2-hex;
+    padding: 2em 0;
+
     img{
-        max-width: 130px;
+        max-width: 150px;
+    }
+    &__ancora{
+        text-decoration: none;
+        color: $color-theme-3-hex;
+        border-bottom: 1px solid $color-theme-3-hex;
+    }
+}
+@media screen and (max-width: 760px) {
+    .footer{
+        img{
+            max-width: 100px;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .footer{
+        flex-direction: column;
+        row-gap: 1rem;
     }
 }
