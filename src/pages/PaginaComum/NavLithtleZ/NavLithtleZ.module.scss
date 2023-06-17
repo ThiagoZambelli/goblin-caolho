@@ -90,4 +90,28 @@
     &__btn {
         padding: .3em 0;
     }
+
+}
+@media screen and (max-width: 820px) {
+    .topo{
+        &__header{
+            flex-direction: column;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 570px) {
+    .topo{
+        header{
+            nav{
+                padding: 2em 0;
+                width: 100%;
+                justify-content: space-evenly;
+            }
+        }
+        .links{
+            flex-direction: column;
+        }
+    }    
 }
