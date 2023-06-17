@@ -21,7 +21,7 @@ function NavLithtleZ() {
         estadoModal()
     }
 
-    const logado = usePegaLogado();   
+    const logado = usePegaLogado();      
 
     return (
         <>
@@ -37,7 +37,7 @@ function NavLithtleZ() {
                             <LinkNav to='#' id='favoritos' nome='Favoritos' />
                         </div>
                         {logado
-                            ? <div>
+                            ? <div className={styles.ancora}>
                                 <Link to={"#"}>Meu perfil</Link>
                             </div>
                             : <div>

@@ -1,8 +1,8 @@
 import { useRecoilValue } from "recoil";
-import { loagdo } from "state/atom";
+import { logado } from "state/atom";
 
 
 export default function usePegaLogado(){
-    const estadoLogado = useRecoilValue(loagdo);
+    const estadoLogado = useRecoilValue(logado);
     return estadoLogado;
 }

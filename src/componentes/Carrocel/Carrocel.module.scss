@@ -1,12 +1,14 @@
 @import 'styles/_variaveis.module.scss';
 
-.titulo{
+.titulo {
     text-align: center;
     font-size: 2rem;
     padding: 1em 0;
     color: $color-theme-1-hex;
+    margin-top: 2em;
 }
-.carrocelContainer{
+
+.carrocelContainer {
     padding: 2rem 0;
     display: flex;
     align-items: flex-start;
@@ -15,49 +17,70 @@
     column-gap: 2rem;
     row-gap: 2rem;
 
-    &__descricao{
+
+
+    &__descricao {
+        opacity: 0;
+        animation: fadeIn 1.3s ease-in-out forwards;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
         max-width: 400px;
         display: flex;
         flex-direction: column;
-        align-items: center;        
-        &__titulo{
+        align-items: center;
+
+
+        &__titulo {
             font-size: 1.5rem;
             text-align: center;
             padding: 2em 0;
         }
-        p{
+
+        p {
             font-size: 12px;
             text-align: justify;
             line-height: 1.5em;
         }
     }
 
-    &__invertido{
+    &__invertido {
         order: 3;
     }
 }
-.carrocel{
+
+.carrocel {
     display: flex;
-    align-items: center;    
+    align-items: center;
     order: 2;
-    
-    &__cards{
-        display: flex;        
+
+    &__cards {
+        display: flex;
         margin: 2rem;
-        h4{
+
+        h4 {
             font-size: 14px;
         }
     }
 }
-.teste{
-    cursor: pointer;
+
+.teste {
+    box-shadow: 0 0 9px black;
 }
 
 @media screen and (max-width: 760px) {
 
-    .carrocel{
-        &__sumirBTN{
+    .carrocel {
+        &__sumirBTN {
             display: none;
         }
-    }    
+    }
 }

@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
 
-
-
 .topo {
     display: flex;
     flex-direction: column;
@@ -9,9 +7,9 @@
     font-size: 1.3rem;
     color: #6F4A8E;
     background-color: #EBEBEB;
-    
 
-    &__btn{
+
+    &__btn {
         color: #6F4A8E;
         background-color: #EBEBEB;
         font-size: 1.3rem;
@@ -22,7 +20,7 @@
         cursor: pointer;
         transition: .5s;
 
-        &:hover{
+        &:hover {
             color: #EBEBEB;
             background-color: #6F4A8E;
         }
@@ -33,12 +31,12 @@
         align-items: center;
         padding-top: 1rem;
 
-        margin-top: -100%; 
-        transition: margin-top .8s;     
+        margin-top: -100%;
+        transition: margin-top .8s;
 
-        &__aberto {                       
+        &__aberto {
             margin-top: 0;
-        }       
+        }
 
         h1 {
             max-width: 200px;
@@ -54,23 +52,42 @@
             align-items: center;
             justify-content: space-between;
 
-            .links{
+            .links {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
+                color: #6F4A8E;
+                text-decoration: none;
+
             }
-            
+
+            .ancora {
+                a {
+                    color: #6F4A8E;
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                    padding: .3em .5em;
+                    transition: .5s;
+
+                    &:hover {
+                        color: #EBEBEB;
+                        background-color: #6F4A8E;
+                    }
+                }
+            }
+
         }
     }
 
 }
 
-.btnAbertura{
+.btnAbertura {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #EBEBEB;
-    &__btn{
+
+    &__btn {
         padding: .3em 0;
     }
 }

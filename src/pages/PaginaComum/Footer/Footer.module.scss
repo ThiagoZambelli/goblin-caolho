@@ -1,6 +1,6 @@
 @import 'styles/_variaveis.module.scss';
 
-.footer{
+.footer {
     background-color: $color-theme-4-hex;
     display: flex;
     align-items: center;
@@ -8,24 +8,27 @@
     color: $color-theme-2-hex;
     padding: 2em 0;
 
-    img{
+    img {
         max-width: 150px;
     }
-    &__ancora{
+
+    &__ancora {
         text-decoration: none;
         color: $color-theme-3-hex;
         border-bottom: 1px solid $color-theme-3-hex;
     }
 }
+
 @media screen and (max-width: 760px) {
-    .footer{
-        img{
+    .footer {
+        img {
             max-width: 100px;
         }
     }
 }
+
 @media screen and (max-width: 500px) {
-    .footer{
+    .footer {
         flex-direction: column;
         row-gap: 1rem;
     }

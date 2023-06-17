@@ -8,7 +8,6 @@ import usePegaArmaduras from 'state/hooks/usePegaArmaduras';
 function PaginaInicio() {
 const itensDestaque = useItensAleatorios();
 const armaduras = usePegaArmaduras();
-console.log(armaduras)
 
   return (
     <main className={styles.paginaInicial}>

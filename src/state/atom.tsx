@@ -4,9 +4,9 @@ export const error = atom<string>({
     key: 'error',
     default: ''
 })
-export const loagdo = atom<boolean>({
-    key: 'loagdo',
-    default: false
+export const logado = atom<boolean>({
+    key: 'logado',
+    default: true
 })
 export const modalLogin = atom<boolean>({
     key: 'modalLogin',
