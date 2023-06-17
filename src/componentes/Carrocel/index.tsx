@@ -87,8 +87,8 @@ function Carrocel({ cards, titulo, invertido = true }: CarrocelProps) {
                                 onClick={() => { mudarClicando(card) }}
                                 children={<h4>{card.nome}</h4>}
                                 className={card.id === idItemMostrado
-                                    ? 'display: flex;justify-content: center;text-align: justify;max-width: 180px;height: 150px;text-align: center;cursor: pointer; box-shadow: 0 0 9px black;'
-                                    : ' display: flex;justify-content: center;text-align: justify;cursor: pointer;transform: scale(0.7);text-align: center;opacity: .5;max-width: 150px;font-size: 10px; box-shadow: 0 0 9px black;'
+                                    ? 'padding: 1em; align-items: center; display: flex;justify-content: center;text-align: justify;max-width: 180px; height: 110px; text-align: center;cursor: pointer; box-shadow: 0 0 9px black;'
+                                    : 'padding: 1em; align-items: center; display: flex;justify-content: center;text-align: justify;cursor: pointer;transform: scale(0.7);text-align: center;opacity: .5;max-width: 150px;font-size: 10px; box-shadow: 0 0 9px black;'
                                 }
                             />
                         ))}
@@ -105,7 +105,7 @@ function Carrocel({ cards, titulo, invertido = true }: CarrocelProps) {
                 <div key={itemMostrado.id} className={`${styles.carrocelContainer__descricao} ${invertido && styles.carrocelContainer__invertido}`}>
                     <LzCard
                         bgColor='#B69E7C'
-                        className={'display: flex;flex-direction: column;align-items: center; row-gap: 4rem; justify-content: center;'}
+                        className={'padding: 1em; display: flex;flex-direction: column;align-items: center; row-gap: 4rem; justify-content: center;'}
                     >
                         <h3 className={styles.carrocelContainer__descricao__titulo}>{itemMostrado.nome}</h3>
                         <p>{itemMostrado.descricao}</p>
