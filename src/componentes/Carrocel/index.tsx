@@ -17,7 +17,8 @@ function Carrocel({ cards, titulo, invertido = true }: CarrocelProps) {
 
     const [lugarNaFilaAtual, setLugarNaFilaAtual] = useState(0)
     const [idItemMostrado, setIdItemMostrado] = useState(primeiroDaFila);
-    const [itemMostrado, setItemMostrado] = useState({ id: 0, nome: '', titulo: '', descricao: '' });
+    const [itemMostrado, setItemMostrado] = useState({ id: 0, nome: '', raridade: '', descricao: '',  tipo:''});
+    
 
 
     const praFrente = () => {
@@ -40,6 +41,10 @@ function Carrocel({ cards, titulo, invertido = true }: CarrocelProps) {
         const mostrado = cards.filter(card => card.id === cards[lugarNaFilaAtual].id)
         setItemMostrado(mostrado[0])
     }
+    const mudarClicando = (card: ICardItemC) => {
+        setItemMostrado(card)
+        setIdItemMostrado(card.id)
+    }
 
     useEffect(() => {
         // Código a ser executado quando o componente for montado
@@ -55,22 +60,30 @@ function Carrocel({ cards, titulo, invertido = true }: CarrocelProps) {
             {titulo ? <h2 className={styles.titulo}>{titulo}</h2> : ''}
             <section className={styles.carrocelContainer}>
                 <section className={styles.carrocel}>
-                    <LzBotao corHover='#161B21' corPrimaria='#26100E' corSecundaria='#B69E7C' onClick={praTras} ><AiOutlineArrowLeft /></LzBotao>
+                    <div className={styles.carrocel__sumirBTN}>
+                        <LzBotao corHover='#161B21' corPrimaria='#26100E' corSecundaria='#B69E7C' onClick={praTras} ><AiOutlineArrowLeft /></LzBotao>
+                    </div>
                     <div className={styles.carrocel__cards}>
                         {cards.map(card => (
                             <LzCard
                                 key={card.id}
                                 bgColor='#B69E7C'
+                                onClick={() => { mudarClicando(card) }}
                                 children={<h4>{card.nome}</h4>}
-                                className={card.id === idItemMostrado ? 'transform: scale(1.1); max-width: 180px; text-align: center;' : 'text-align: center; opacity: .5; max-width: 150px; font-size:12px'}
+                                className={card.id === idItemMostrado
+                                    ? 'cursor: pointer; max-width: 180px; text-align: center; display: flex;justify-content: center; text-align: justify;'
+                                    : 'cursor: pointer; transform: scale(0.8); text-align: center; opacity: .5; max-width: 150px; font-size:10px; display: flex; justify-content: center; text-align: justify;'
+                                }
                             />
                         ))}
                     </div>
-                    <LzBotao corHover='#161B21' corPrimaria='#26100E' corSecundaria='#B69E7C' onClick={praFrente} ><AiOutlineArrowRight /></LzBotao>
+                    <div className={styles.carrocel__sumirBTN}>
+                        <LzBotao corHover='#161B21' corPrimaria='#26100E' corSecundaria='#B69E7C' onClick={praFrente} ><AiOutlineArrowRight /></LzBotao>
+                    </div>
                 </section>
                 <div className={`${styles.carrocelContainer__descricao} ${invertido && styles.carrocelContainer__invertido}`}>
                     <LzCard bgColor='#B69E7C' className={'display: flex;flex-direction: column;align-items: center; row-gap: 4rem; justify-content: center;'}>
-                        <h3>{itemMostrado.nome}</h3>
+                        <h3 className={styles.carrocelContainer__descricao__titulo}>{itemMostrado.nome}</h3>
                         <p>{itemMostrado.descricao}</p>
                         <LzBotao tipo='secundario' corHover='#161B21' corPrimaria='#26100E' corSecundaria='#B69E7C' forma="gota" >Ver mais</LzBotao>
                     </LzCard>

@@ -8,3 +8,7 @@ export const loagdo = atom<boolean>({
     key: 'loagdo',
     default: false
 })
+export const modalLogin = atom<boolean>({
+    key: 'modalLogin',
+    default: false
+})

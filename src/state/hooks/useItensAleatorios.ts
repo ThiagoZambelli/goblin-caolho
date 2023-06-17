@@ -1,4 +1,4 @@
-import itensMagicos from 'assets/itensMagicos.json';
+import itensMagicos from 'assets/litsaItensMagicos.json';
 import ICardItemC from 'interfaces/ICardItemC';
 
 export default function useItensAleatorios(lista?:ICardItemC[]) {

@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 import usePegaLogado from 'state/hooks/usePegaLogado';
 import LinkNav from './LinkNav';
 import { RxAvatar } from 'react-icons/rx'
-import { LzModal } from 'lithtlez-ds';
+import useAbrirModalLogin from 'state/hooks/useAbrirModalLogin';
 
 
 function NavLithtleZ() {
 
-    const [modalAerto, setModalAerto] = useState(false);
+    const estadoModal = useAbrirModalLogin()
     const [navAberto, setNavAberto] = useState(false)
 
     const abrirNav = () => {
@@ -18,11 +18,10 @@ function NavLithtleZ() {
     }
 
     const abrirModal = () => {
-        setModalAerto(!modalAerto)
+        estadoModal()
     }
 
-    const logado = usePegaLogado();
-    console.log(navAberto)
+    const logado = usePegaLogado();   
 
     return (
         <>
@@ -32,7 +31,7 @@ function NavLithtleZ() {
                         <img src={logo} alt='Logo do LiththleZ' />
                     </h1>
                     <nav>
-                        <div className={styles.header__links}>
+                        <div className={styles.links}>
                             <LinkNav to='https://novo-projeto-solo-react-ts.vercel.app/' id='forjaDeLendas' nome='Forja de Lendas' />
                             <LinkNav to='/' id='goblinCaolho' nome='Goblin Caolho' />
                             <LinkNav to='#' id='favoritos' nome='Favoritos' />
@@ -44,10 +43,7 @@ function NavLithtleZ() {
                             : <div>
                                 <button className={`${styles.topo__btn}`} onClick={abrirModal}><RxAvatar /> Logar</button>
                             </div>
-                        }
-                        {modalAerto
-                            ? <LzModal titulo='Pipoca' children={<div>Pipoca</div>} aberta={modalAerto} aoFechar={abrirModal} />
-                            : ''}
+                        }                       
                     </nav>
                 </header>
             </div>
