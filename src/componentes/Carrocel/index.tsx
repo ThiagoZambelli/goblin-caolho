@@ -45,9 +45,11 @@ function Carrocel({ cards, titulo, invertido = true }: CarrocelProps) {
     }
 
     // Muda o card ao clicar nele
-    const mudarClicando = (card: ICardItemC) => {
-        setItemMostrado(card)
-        setIdItemMostrado(card.id)
+    const mudarClicando = (cardPassado: ICardItemC) => {
+        const indice = cards.findIndex(card => card.id === cardPassado.id);
+        setLugarNaFilaAtual(indice)
+        setItemMostrado(cardPassado)
+        setIdItemMostrado(cardPassado.id)
     }
 
     // Carrega o novo card motrado quando mudar o valor do controlador
@@ -101,7 +103,7 @@ function Carrocel({ cards, titulo, invertido = true }: CarrocelProps) {
                     </div>
                 </section>
                 <div key={itemMostrado.id} className={`${styles.carrocelContainer__descricao} ${invertido && styles.carrocelContainer__invertido}`}>
-                    <LzCard                        
+                    <LzCard
                         bgColor='#B69E7C'
                         className={'display: flex;flex-direction: column;align-items: center; row-gap: 4rem; justify-content: center;'}
                     >
