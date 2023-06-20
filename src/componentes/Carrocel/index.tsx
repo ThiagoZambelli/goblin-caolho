@@ -1,6 +1,6 @@
 import ICardItemC from 'interfaces/ICardItemC'
 import { LzBotao, LzCard } from 'lithtlez-ds';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './Carrocel.module.scss';
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai'
 

@@ -5,19 +5,36 @@ import Footer from './Footer'
 import { LzModal } from 'lithtlez-ds'
 import useEstadoModalLogin from 'state/hooks/useEstadoModalLogin'
 import useAbrirModalLogin from 'state/hooks/useAbrirModalLogin'
+import useEstadoModalCadastro from 'state/hooks/useEstadoModalCadastro'
+import useAbrirModalCadastro from 'state/hooks/useAbrirModalCadastro'
+import ModalCdastro from 'componentes/ModalCadastro'
 
 function PaginaComum() {
-  const modalAberto = useEstadoModalLogin();
-  const mudarModal = useAbrirModalLogin();
+  const modalAbertoLogin = useEstadoModalLogin();
+  const modalAbertoCadastro = useEstadoModalCadastro();
 
-  const abrirModal = () => {
-    mudarModal()
+  const mudarModalLogin = useAbrirModalLogin();
+  const mudarModalCadastro = useAbrirModalCadastro();
+
+  const abrirModalLogin = () => {
+    mudarModalLogin()
   }
+  const abrirModalCadastro = () => {
+    mudarModalCadastro()
+  }
+  const variaveisCor = {
+    corPrimaria: '#402C25',
+    corSecundaria: 'rgba(182,158,124, .9)',
+    corBg: 'rgba(242,238,182, .5)'
 
+  }
   return (
     <div>
-      {modalAberto
-        ? <LzModal titulo='Pipoca' children={<div>Pipoca</div>} aberta={modalAberto} aoFechar={abrirModal} />
+      {modalAbertoLogin
+        ? <LzModal {...variaveisCor} titulo='Login' children={<div>Pipoca</div>} aberta={modalAbertoLogin} aoFechar={abrirModalLogin} />
+        : ''}
+      {modalAbertoCadastro
+        ? <LzModal {...variaveisCor} titulo='Cadastro' children={<ModalCdastro />} aberta={modalAbertoCadastro} aoFechar={abrirModalCadastro} />
         : ''}
       <NavLithtleZ />
       <Outlet />

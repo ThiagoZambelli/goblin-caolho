@@ -6,19 +6,25 @@ import usePegaLogado from 'state/hooks/usePegaLogado';
 import LinkNav from './LinkNav';
 import { RxAvatar } from 'react-icons/rx'
 import useAbrirModalLogin from 'state/hooks/useAbrirModalLogin';
+import useAbrirModalCadastro from 'state/hooks/useAbrirModalCadastro';
+import { CgReadme } from "react-icons/cg";
 
 
 function NavLithtleZ() {
 
-    const estadoModal = useAbrirModalLogin()
+    const estadoModalCadastro = useAbrirModalCadastro()
+    const estadoModalLogin = useAbrirModalLogin()
     const [navAberto, setNavAberto] = useState(false)
 
     const abrirNav = () => {
         setNavAberto(!navAberto)
     }
 
-    const abrirModal = () => {
-        estadoModal()
+    const abrirModalCadastro = () => {
+        estadoModalCadastro()
+    }
+    const abrirModalLogin = () => {
+        estadoModalLogin()
     }
 
     const logado = usePegaLogado();      
@@ -41,7 +47,8 @@ function NavLithtleZ() {
                                 <Link to={"#"}>Meu perfil</Link>
                             </div>
                             : <div>
-                                <button className={`${styles.topo__btn}`} onClick={abrirModal}><RxAvatar /> Logar</button>
+                                <button className={`${styles.topo__btn}`} onClick={abrirModalLogin}><RxAvatar /> Logar</button>
+                                <button className={`${styles.topo__btn}`} onClick={abrirModalCadastro}><CgReadme /> Cadastrar</button>
                             </div>
                         }                       
                     </nav>

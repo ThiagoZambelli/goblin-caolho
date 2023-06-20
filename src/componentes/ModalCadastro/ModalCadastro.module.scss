@@ -1,0 +1,27 @@
+@import 'styles/_variaveis.module.scss';
+
+.cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+    figure{
+        max-width: 200px;
+        img{
+            width: 100%; display: none;
+        }
+    }
+    form{
+        width: 420px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        footer{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

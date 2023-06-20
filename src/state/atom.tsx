@@ -12,3 +12,7 @@ export const modalLogin = atom<boolean>({
     key: 'modalLogin',
     default: false
 })
+export const modalCadastro = atom<boolean>({
+    key: 'modalCadastro',
+    default: false
+})
