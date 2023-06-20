@@ -4,10 +4,9 @@ import styles from './NavLithtleZ.module.scss';
 import { Link } from 'react-router-dom';
 import usePegaLogado from 'state/hooks/usePegaLogado';
 import LinkNav from './LinkNav';
-import { RxAvatar } from 'react-icons/rx'
 import useAbrirModalLogin from 'state/hooks/useAbrirModalLogin';
 import useAbrirModalCadastro from 'state/hooks/useAbrirModalCadastro';
-import { CgReadme } from "react-icons/cg";
+import { AiOutlineUserAdd, AiOutlineUser } from "react-icons/ai";
 
 
 function NavLithtleZ() {
@@ -47,8 +46,8 @@ function NavLithtleZ() {
                                 <Link to={"#"}>Meu perfil</Link>
                             </div>
                             : <div>
-                                <button className={`${styles.topo__btn}`} onClick={abrirModalLogin}><RxAvatar /> Logar</button>
-                                <button className={`${styles.topo__btn}`} onClick={abrirModalCadastro}><CgReadme /> Cadastrar</button>
+                                <button className={`${styles.topo__btn}`} onClick={abrirModalLogin}><AiOutlineUser /> Logar</button>
+                                <button className={`${styles.topo__btn}`} onClick={abrirModalCadastro}><AiOutlineUserAdd /> Cadastrar</button>
                             </div>
                         }                       
                     </nav>

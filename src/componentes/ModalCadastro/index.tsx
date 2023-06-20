@@ -2,6 +2,7 @@ import { LzBotao, LzInput } from 'lithtlez-ds'
 import { useState } from 'react';
 import imagemLogin from './assets/cadastro.png';
 import styles from './ModalCadastro.module.scss';
+import useAoCadastrar from 'state/hooks/useAoCadastrar';
 
 function ModalCdastro() {
   const [nome, setNome] = useState('')
@@ -12,19 +13,42 @@ function ModalCdastro() {
   const [complemento, setComplemento] = useState('')
   const [cep, setCep] = useState('')
 
+  const aoCadastrar = useAoCadastrar();
+
   const variaveisCorFontsize = {
     fontSize: 14,
-    corPrimaria:'#402C25',
-    corSecundaria:'#B69E7C',
+    corPrimaria: '#402C25',
+    corSecundaria: '#B69E7C',
     required: true
-  }  
+  }
+
+  const aoSubmeterCriacaoDeUsuario = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    const novoUsuario = {
+      nome,
+      email,
+      senha,
+      endereco,
+      cep,
+      complemento
+    }
+
+    aoCadastrar(novoUsuario);
+    setNome('')
+    setEmail('')
+    setSenha('')
+    setConfSenha('')
+    setEndereco('')
+    setComplemento('')
+    setCep('')
+  }
 
   return (
     <div className={styles.cadastro}>
       <figure>
         <img src={imagemLogin} alt='Imagem de cadastro' />
       </figure>
-      <form>
+      <form onSubmit={aoSubmeterCriacaoDeUsuario}>
         <LzInput {...variaveisCorFontsize} label='Nome Completo' onChange={event => { setNome(event) }} value={nome} />
         <LzInput {...variaveisCorFontsize} label='Email' onChange={event => { setEmail(event) }} value={email} type='email' />
         <LzInput {...variaveisCorFontsize} label='Endereço' onChange={event => { setEndereco(event) }} value={endereco} />

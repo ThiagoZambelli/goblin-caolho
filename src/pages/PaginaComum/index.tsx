@@ -8,6 +8,7 @@ import useAbrirModalLogin from 'state/hooks/useAbrirModalLogin'
 import useEstadoModalCadastro from 'state/hooks/useEstadoModalCadastro'
 import useAbrirModalCadastro from 'state/hooks/useAbrirModalCadastro'
 import ModalCdastro from 'componentes/ModalCadastro'
+import ModalLogin from 'componentes/ModalLogin'
 
 function PaginaComum() {
   const modalAbertoLogin = useEstadoModalLogin();
@@ -31,7 +32,7 @@ function PaginaComum() {
   return (
     <div>
       {modalAbertoLogin
-        ? <LzModal {...variaveisCor} titulo='Login' children={<div>Pipoca</div>} aberta={modalAbertoLogin} aoFechar={abrirModalLogin} />
+        ? <LzModal {...variaveisCor} titulo='Login' children={<ModalLogin />} aberta={modalAbertoLogin} aoFechar={abrirModalLogin} />
         : ''}
       {modalAbertoCadastro
         ? <LzModal {...variaveisCor} titulo='Cadastro' children={<ModalCdastro />} aberta={modalAbertoCadastro} aoFechar={abrirModalCadastro} />
