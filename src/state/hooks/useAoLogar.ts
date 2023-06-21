@@ -9,11 +9,15 @@ export default function useAoLogar(){
         axios.post('http://localhost:8000/public/login', usuarioLogin)
             .then((resposta) => {
                 alert('Login efetuado !');
-                console.log(resposta)
+                sessionStorage.setItem('token', resposta.data.access_token)
                 fecharModal();
             })
             .catch((erro) => {
-                alert(`Algo deu errado ! : ${erro}`)
+                if(erro?.response?.data?.message){
+                    alert(erro.response.data.message)
+                } else {
+                    alert(`Algo deu errado ! : /n ${erro}`)
+                }
             })
     }
 }

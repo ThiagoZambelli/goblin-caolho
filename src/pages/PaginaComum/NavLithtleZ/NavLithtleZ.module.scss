@@ -59,6 +59,8 @@
             }
 
             .ancora {
+                display: flex;
+                flex-direction: column;
                 a {
                     color: #6F4A8E;
                     text-decoration: none;

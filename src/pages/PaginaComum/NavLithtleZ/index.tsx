@@ -7,6 +7,7 @@ import LinkNav from './LinkNav';
 import useAbrirModalLogin from 'state/hooks/useAbrirModalLogin';
 import useAbrirModalCadastro from 'state/hooks/useAbrirModalCadastro';
 import { AiOutlineUserAdd, AiOutlineUser } from "react-icons/ai";
+import useFazerLogoff from 'state/hooks/useFazerLogoff';
 
 
 function NavLithtleZ() {
@@ -26,7 +27,8 @@ function NavLithtleZ() {
         estadoModalLogin()
     }
 
-    const logado = usePegaLogado();      
+    const logado = usePegaLogado(); 
+    const deslogar = useFazerLogoff();     
 
     return (
         <>
@@ -38,12 +40,13 @@ function NavLithtleZ() {
                     <nav>
                         <div className={styles.links}>
                             <LinkNav to='https://novo-projeto-solo-react-ts.vercel.app/' id='forjaDeLendas' nome='Forja de Lendas' />
-                            <LinkNav to='/' id='goblinCaolho' nome='Goblin Caolho' />
-                            <LinkNav to='#' id='favoritos' nome='Favoritos' />
+                            <LinkNav to='/' id='goblinCaolho' nome='Goblin Caolho' />                            
                         </div>
                         {logado
                             ? <div className={styles.ancora}>
-                                <Link to={"#"}>Meu perfil</Link>
+                                <Link to={"/meuperfil"}>Meu perfil</Link>
+                                <Link to={"#"}>Meus Favoritos</Link>
+                                <button className={`${styles.topo__btn}`} onClick={deslogar}>Sair</button>
                             </div>
                             : <div>
                                 <button className={`${styles.topo__btn}`} onClick={abrirModalLogin}><AiOutlineUser /> Logar</button>
