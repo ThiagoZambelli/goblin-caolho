@@ -45,7 +45,7 @@ function NavLithtleZ() {
                         {logado
                             ? <div className={styles.ancora}>
                                 <Link to={"/meuperfil"}>Meu perfil</Link>
-                                <Link to={"#"}>Meus Favoritos</Link>
+                                <Link to={"/meuperfil/meusfavoritos"}>Meus Favoritos</Link>
                                 <button className={`${styles.topo__btn}`} onClick={deslogar}>Sair</button>
                             </div>
                             : <div>

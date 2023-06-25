@@ -1,7 +1,9 @@
 import itensMagicos from 'assets/litsaItensMagicos.json';
 import ICardItemC from 'interfaces/ICardItemC';
 
-export default function useItensAleatorios(lista?:ICardItemC[]) {
+export default function useItensAleatorios(lista?:ICardItemC[]) { 
+
+  
 
   if (lista && lista.length > 2) {
     const listaEmbaralhada = [...lista];
@@ -11,6 +13,7 @@ export default function useItensAleatorios(lista?:ICardItemC[]) {
       [listaEmbaralhada[i], listaEmbaralhada[j]] = [listaEmbaralhada[j], listaEmbaralhada[i]];
     }
     const itensSelecionados = listaEmbaralhada.slice(0, 3);
+   
 
 
     return itensSelecionados;

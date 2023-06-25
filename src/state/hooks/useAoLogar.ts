@@ -2,8 +2,9 @@ import axios from "axios";
 import ILogin from "interfaces/ILogin";
 import useAbrirModalLogin from "./useAbrirModalLogin";
 
+
 export default function useAoLogar(){
-    const fecharModal = useAbrirModalLogin();
+    const fecharModal = useAbrirModalLogin();   
     
     return (usuarioLogin : ILogin) => {
         axios.post('http://localhost:8000/public/login', usuarioLogin)
@@ -14,9 +15,9 @@ export default function useAoLogar(){
             })
             .catch((erro) => {
                 if(erro?.response?.data?.message){
-                    alert(erro.response.data.message)
+                    alert(erro.response.data.message);                    
                 } else {
-                    alert(`Algo deu errado ! : /n ${erro}`)
+                    alert(`Algo deu errado ! : /n ${erro}`)                    
                 }
             })
     }

@@ -1,7 +1,7 @@
 import { atom } from "recoil";
 
-export const error = atom<string>({
-    key: 'error',
+export const erro = atom<string>({
+    key: 'erro',
     default: ''
 })
 export const logado = atom<boolean>({
