@@ -1,7 +1,19 @@
 import itensMagicos from 'assets/itensMagicos.json';
+import { useEffect, useState } from 'react';
+import { getItens } from 'servicos/itens';
 
 
 export default function useItensMagicos(){
-    const itens = itensMagicos
-    return itens;
+    const [itens, setItens] = useState([]);
+    async function fetchIntens() {
+        const itensAPI = await getItens();
+        setItens(itensAPI)
+    }
+
+    useEffect(() => {
+       fetchIntens()
+    }, [])
+
+    return itens; 
+    
 }

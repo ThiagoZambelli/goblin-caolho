@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavLithtleZ from './NavLithtleZ'
 import { Outlet } from 'react-router-dom'
 import Footer from './Footer'
@@ -13,10 +13,8 @@ import ModalLogin from 'componentes/ModalLogin'
 function PaginaComum() {
   const modalAbertoLogin = useEstadoModalLogin();
   const modalAbertoCadastro = useEstadoModalCadastro();
-
   const mudarModalLogin = useAbrirModalLogin();
-  const mudarModalCadastro = useAbrirModalCadastro();
-
+  const mudarModalCadastro = useAbrirModalCadastro(); 
   const abrirModalLogin = () => {
     mudarModalLogin()
   }
