@@ -3,6 +3,8 @@ export default interface ICardItemC{
     nome: string,
     raridade: string,
     descricao: string,
-    tipo:string
+    tipo:string,
+    favorito?:boolean
+      
 }
 

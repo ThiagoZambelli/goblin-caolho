@@ -2,10 +2,12 @@
 
 .titulo {
     text-align: center;
-    font-size: 2rem;
-    padding: 1em 0;
+    font-size: 4rem;
+    padding: .5em 0;
     color: $color-theme-1-hex;
     margin-top: 2em;
+    font-family: $fontWizard;
+    text-shadow: black -2px 0, black 2px 0;
 }
 
 .carrocelContainer {
@@ -40,15 +42,20 @@
 
 
         &__titulo {
-            font-size: 1.5rem;
+            font-size: 3rem;
             text-align: center;
-            padding: 2em 0;
+            padding: 1em 0;
+            font-family: $fontWizard;
         }
 
         p {
-            font-size: 12px;
+            font-size: 1.2rem;
             text-align: justify;
             line-height: 1.5em;
+            font-family: $fontTextoNormal;
+        }
+        button{
+            font-family: $fontTextoNormal;            
         }
     }
 
@@ -61,19 +68,22 @@
     display: flex;
     align-items: center;
     order: 2;
+    
 
     &__cards {
         display: flex;
-        margin: 1rem;
+        margin: 2rem;
+        font-family: $fontTextoNormal;
 
         h4 {
-            font-size: 14px;
+            font-size: 1.5rem;
         }
     }
 }
 
 .teste {
-    align-items: center;padding: 2em;
+    align-items: center;
+    padding: 2em;
 }
 
 @media screen and (max-width: 760px) {

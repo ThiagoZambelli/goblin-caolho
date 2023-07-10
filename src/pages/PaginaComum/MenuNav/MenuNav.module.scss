@@ -1,0 +1,23 @@
+@import 'styles/_variaveis.module.scss';
+
+.nav{
+    font-size: 3rem;
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $color-theme-2-hex;
+    font-family: $fontHobbit; 
+    &__linkAtual{
+        transform: scale(1.05);        
+        text-decoration: none;        
+        color: $color-theme-3-hex;
+        text-decoration: underline;
+    }
+    &__linkNormal{
+        text-decoration: none;
+        opacity: 0.7;
+        color: $color-theme-3-hex;     
+    }
+}
+

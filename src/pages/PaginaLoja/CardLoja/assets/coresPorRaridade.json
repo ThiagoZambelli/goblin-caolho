@@ -1,0 +1,38 @@
+[
+    {
+        "raidade":"Uncommon",
+        "cor":"#55FA6E"
+    },
+    {
+        "raidade":"uncommon",
+        "cor":"#55FA6E"
+    },
+    {
+        "raidade":"Uncommon (requires attunement)",
+        "cor":"#55FA6E"
+    },  
+    {
+        "raidade":"Rare",
+        "cor":"#658FFA"
+    },
+    {
+        "raidade":"Rare (requires attunement)",
+        "cor":"#658FFA"
+    },
+    {
+        "raidade":"Very Rare",
+        "cor":"#FADF3F"
+    },
+    {
+        "raidade":"very rare",
+        "cor":"#FADF3F"
+    },
+    {
+        "raidade":"Very rare (requires attunement)",
+        "cor":"#FADF3F"
+    },
+    {
+        "raidade":"Legendary",
+        "cor":"#FA9038"
+    }
+]

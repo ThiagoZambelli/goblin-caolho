@@ -6,6 +6,8 @@ import PaginaComum from './pages/PaginaComum'
 import PaginaInicio from 'pages/PaginaInicio'
 import PaginaMeuPerfil from 'pages/PaginaMeuPerfil'
 import PaginaMeusFavoritos from 'pages/PaginaMeusFavoritos'
+import PaginaLoja from 'pages/PaginaLoja'
+import PaginaDeItem from 'pages/PaginaDeItem'
 
 const Rotas = () => {
     return (
@@ -13,6 +15,8 @@ const Rotas = () => {
             <Routes>
                 <Route path='/' element={<PaginaComum />}>
                     <Route index element={<PaginaInicio />} />
+                    <Route path='/loja' element={<PaginaLoja />} />
+                    <Route path='/item/:id' element={<PaginaDeItem />} />
                     <Route path='/meuperfil' element={<PaginaMeuPerfil />} >
                         <Route path='meusfavoritos' element={<PaginaMeusFavoritos />} />
                     </Route>

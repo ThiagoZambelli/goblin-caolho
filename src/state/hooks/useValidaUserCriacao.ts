@@ -23,10 +23,7 @@ export default function useValidaUserCriacao() {
             alert("Problema ao cadastrar")
             return null
         }
-
     }
-
-
 }
 
 function testaSenha(user: INovoUsuarioValidacao) {

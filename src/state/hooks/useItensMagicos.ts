@@ -1,4 +1,3 @@
-import itensMagicos from 'assets/itensMagicos.json';
 import { useEffect, useState } from 'react';
 import { getItens } from 'servicos/itens';
 

@@ -1,0 +1,77 @@
+@import 'styles/_variaveis.module.scss';
+
+.cardLoja {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    background-color: $color-theme-2-cardLojaSFoco;
+    padding: 1rem;
+    border-radius: 1rem .2rem 1rem .2rem;
+    margin: 1rem .5rem;
+    cursor: pointer;
+    transition: .5s;
+    background-image: url('assets/stardust.png');
+
+
+    &:hover {
+        background-color: $color-theme-2-cardLojaCFoco;
+        transform: scale(1.01);
+        box-shadow: 3px 3px 9px black;
+    }
+
+    header {
+        font-size: 2rem;
+        text-align: center;
+        padding: .1em;        
+        color: $color-theme-5-hex;
+        font-family: $fontWizard;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        text-align: center;
+        padding: .5em;
+        color: $color-theme-5-hex;
+        text-decoration: overline;
+        margin-top: .5em;
+    }
+
+    &__descricao {
+        text-align: justify;
+        padding: 2em .3em;
+        margin: .5em 0;
+        color: $color-theme-4-hex;
+        height: 200px;
+        overflow: auto;
+        font-family: $fontTextoNormal;
+        line-height: 1.5em;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $color-theme-5-hex;
+            border-radius: 1em;
+            border: none;
+        }
+    }
+
+    footer {
+        margin-top: auto;
+        text-align: center;
+        border-radius: 1em;
+    }
+}
+
+.teste {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 1rem;
+    padding: .5em 0;
+}

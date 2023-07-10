@@ -1,26 +1,16 @@
-import { LzBotao, LzInput } from 'lithtlez-ds'
-import { useState } from 'react'
 import styles from './Banner.module.scss';
+import React, { ReactNode } from 'react';
 
-function Banner() {
-  const [value, setValue] = useState('');
+interface IBanner {
+  children?: ReactNode;
+}
+
+function Banner({ children }: IBanner) {
+
 
   return (
     <section className={styles.banner}>
-      <LzInput
-        label='O que Procura?'
-        corPrimaria='#26100E'
-        corSecundaria='#B69E7C'
-        value={value} 
-        onChange={(event) => { setValue(event) }}
-      />
-      <LzBotao
-        children='Buscar'
-        corHover='#161B21'
-        corPrimaria='#26100E'
-        corSecundaria='#B69E7C'
-        fontSize={12}
-      />
+      {children}
     </section>
   )
 }

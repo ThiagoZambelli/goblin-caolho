@@ -3,6 +3,7 @@ import { LzBotao, LzCard } from 'lithtlez-ds';
 import { useState, useEffect } from 'react';
 import styles from './Carrocel.module.scss';
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai'
+import { useNavigate } from 'react-router-dom';
 
 interface CarrocelProps {
     cards: ICardItemC[],
@@ -60,6 +61,12 @@ function Carrocel({ cards, titulo, invertido = true }: CarrocelProps) {
 
     }, [lugarNaFilaAtual]); // Coloque as dependências aqui, se necessário
 
+    const ir = useNavigate()
+
+    const irParaPagina = (id:number) => {
+        ir(`/item/${id}`)
+
+    }
 
     return (
 
@@ -87,7 +94,7 @@ function Carrocel({ cards, titulo, invertido = true }: CarrocelProps) {
                                 onClick={() => { mudarClicando(card) }}
                                 children={<h4>{card.nome}</h4>}
                                 className={card.id === idItemMostrado
-                                    ? 'padding: 1em; align-items: center; display: flex;justify-content: center;text-align: justify;max-width: 180px; height: 110px; text-align: center;cursor: pointer; box-shadow: 0 0 9px black;'
+                                    ? 'padding: 1em; align-items: center; display: flex;justify-content: center;text-align: justify;max-width: 200px; height: 130px; text-align: center;cursor: pointer; box-shadow: 0 0 9px black;'
                                     : 'padding: 1em; align-items: center; display: flex;justify-content: center;text-align: justify;cursor: pointer;transform: scale(0.7);text-align: center;opacity: .5;max-width: 150px;font-size: 10px; box-shadow: 0 0 9px black;'
                                 }
                             />
@@ -114,8 +121,9 @@ function Carrocel({ cards, titulo, invertido = true }: CarrocelProps) {
                             corHover='#161B21'
                             corPrimaria='#26100E'
                             corSecundaria='#B69E7C'
-                            forma="gota"
-                        >Ver mais</LzBotao>
+                            forma="gota"                            
+                            onClick={() => {irParaPagina(itemMostrado.id)}}
+                        >Ver mais ...</LzBotao>
                     </LzCard>
                 </div>
             </section>

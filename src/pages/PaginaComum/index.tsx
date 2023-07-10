@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import NavLithtleZ from './NavLithtleZ'
 import { Outlet } from 'react-router-dom'
 import Footer from './Footer'
@@ -9,12 +8,17 @@ import useEstadoModalCadastro from 'state/hooks/useEstadoModalCadastro'
 import useAbrirModalCadastro from 'state/hooks/useAbrirModalCadastro'
 import ModalCdastro from 'componentes/ModalCadastro'
 import ModalLogin from 'componentes/ModalLogin'
+import usePegaItensAPI from 'state/hooks/usePegaItensAPI'
+import MenuNav from './MenuNav'
 
 function PaginaComum() {
   const modalAbertoLogin = useEstadoModalLogin();
   const modalAbertoCadastro = useEstadoModalCadastro();
   const mudarModalLogin = useAbrirModalLogin();
-  const mudarModalCadastro = useAbrirModalCadastro(); 
+  const mudarModalCadastro = useAbrirModalCadastro();
+  const carregaLista = usePegaItensAPI();
+  carregaLista()
+
   const abrirModalLogin = () => {
     mudarModalLogin()
   }
@@ -36,6 +40,7 @@ function PaginaComum() {
         ? <LzModal {...variaveisCor} titulo='Cadastro' children={<ModalCdastro />} aberta={modalAbertoCadastro} aoFechar={abrirModalCadastro} />
         : ''}
       <NavLithtleZ />
+      <MenuNav />
       <Outlet />
       <Footer />
     </div>

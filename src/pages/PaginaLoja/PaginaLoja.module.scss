@@ -1,0 +1,15 @@
+@import 'styles/_variaveis.module.scss';
+.paginaLoja{    
+    padding: 0 0 2rem 0;
+    background-color: $color-theme-3-rgba;
+    background-image: url('assets/dark-wood.png');
+
+    &__cards{
+        padding: 4rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: start;
+        
+    }
+}
