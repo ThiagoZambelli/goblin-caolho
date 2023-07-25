@@ -4,12 +4,14 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'hobbit';
     src: url('/fonts/hobbiton-brushhand-font/HobbitonBrushhandhobbitonBrush-WygA.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'textoNormal';
     src: url('/fonts/kingsman-font/KingsmanDemo-1GVgg.ttf') format('truetype');
@@ -24,35 +26,106 @@ $fontTextoNormal: 'textoNormal', Arial;
 /* Color Theme Swatches in Hex */
 $color-theme-1-hex: #F2EEB6;
 $color-theme-2-hex: #B69E7C;
-    $color-theme-2-cardLojaSFoco: rgba(182,158,124, .5);
-    $color-theme-2-cardLojaCFoco: rgba(182,158,124, .9);
+$color-theme-2-cardLojaSFoco: rgba(182, 158, 124, .5);
+$color-theme-2-cardLojaCFoco: rgba(182, 158, 124, .9);
 $color-theme-3-hex: #402C25;
 $color-theme-4-hex: #161B21;
 $color-theme-5-hex: #26100E;
+$color-theme-5-hex-opaciti7: rgba(38, 16, 14, .5);
+
 
 /* Color Theme Swatches in RGBA */
-$color-theme_robin-olausson-shopkeeper71-1-rgba: rgba(242,238,182, 1);
-$color-theme-2-rgba: rgba(182,158,124, 1);
-$color-theme-3-rgba: rgba(64,44,37, 1);
-$color-theme_robin-olausson-shopkeeper71-4-rgba: rgba(22,27,33, 1);
-$color-theme_robin-olausson-shopkeeper71-5-rgba: rgba(38,16,14, 1);
+$color-theme_robin-olausson-shopkeeper71-1-rgba: rgba(242, 238, 182, 1);
+$color-theme-2-rgba: rgba(182, 158, 124, 1);
+$color-theme-3-rgba: rgba(64, 44, 37, 1);
+$color-theme_robin-olausson-shopkeeper71-4-rgba: rgba(22, 27, 33, 1);
+$color-theme_robin-olausson-shopkeeper71-5-rgba: rgba(38, 16, 14, 1);
 
-*{
+* {
     box-sizing: border-box;
 }
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -60,25 +133,44 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
     list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
     quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;

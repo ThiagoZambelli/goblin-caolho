@@ -1,24 +1,42 @@
 import Banner from 'componentes/Banner'
 import CardLoja from './CardLoja';
 import styles from './PaginaLoja.module.scss';
-import { useState, useEffect} from 'react';
+import { useState, useEffect, ButtonHTMLAttributes } from 'react';
 import { LzInput } from 'lithtlez-ds';
 import useFiltrosLista from 'state/hooks/useFiltrosLista';
 import ICardItemC from 'interfaces/ICardItemC';
+import { TbSortAscendingLetters } from 'react-icons/tb'
+import { SiCurseforge } from 'react-icons/si'
+
 
 function PaginaLoja() {
-  const [filtroNome, setFiltroNome] = useState('')  
+  const [filtroNome, setFiltroNome] = useState('')
   const [listaFiltrada, setListaFiltrada] = useState<ICardItemC[]>([])
-  const filtrar = useFiltrosLista(); 
+  const [ordenador, setOrdenador] = useState<'alfabetica' | 'raridade' | "">('')
+  const filtrar = useFiltrosLista();
 
   const aoFiltrar = (event: string) => {
     setFiltroNome(event);
-    setListaFiltrada(filtrar(event))
+    setListaFiltrada(filtrar(event, ordenador))
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     setListaFiltrada(filtrar())
-  },[])
+  }, [])
+
+  useEffect(() => {
+    setListaFiltrada(filtrar(filtroNome, ordenador))
+  }, [ordenador])
+
+  function ordenar(event: React.MouseEvent<HTMLButtonElement>) {
+    const valorBotao = event.currentTarget.value as 'alfabetica' | 'raridade';;
+    if (valorBotao !== ordenador) {
+      setOrdenador(valorBotao)
+    } else if (valorBotao === ordenador) {
+      setOrdenador('')
+    }
+
+  }
 
   return (
     <main className={styles.paginaLoja}>
@@ -31,9 +49,21 @@ function PaginaLoja() {
           onChange={(event) => { aoFiltrar(event) }}
         />
       </Banner>
+      <section className={styles.paginaLoja__ordenador}>
+        <button
+          className={`${ordenador === 'alfabetica' ? styles.ativo : ''}`}
+          value={'alfabetica'}
+          onClick={ordenar}
+        ><TbSortAscendingLetters /></button>
+        <button
+          className={`${ordenador === 'raridade' ? styles.ativo : ''}`}
+          value={'raridade'}
+          onClick={ordenar}
+        ><SiCurseforge /></button>
+      </section>
       <section className={styles.paginaLoja__cards}>
         {listaFiltrada.length > 0 && listaFiltrada.map(item => {
-          return (<CardLoja key={item.id} {...item} />)
+          return (<CardLoja key={item._id} {...item} />)
         })}
       </section>
     </main>

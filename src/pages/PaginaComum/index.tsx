@@ -10,6 +10,8 @@ import ModalCdastro from 'componentes/ModalCadastro'
 import ModalLogin from 'componentes/ModalLogin'
 import usePegaItensAPI from 'state/hooks/usePegaItensAPI'
 import MenuNav from './MenuNav'
+import { useRecoilValue } from 'recoil'
+import { listaItensAPI } from 'state/atom'
 
 function PaginaComum() {
   const modalAbertoLogin = useEstadoModalLogin();
@@ -17,7 +19,7 @@ function PaginaComum() {
   const mudarModalLogin = useAbrirModalLogin();
   const mudarModalCadastro = useAbrirModalCadastro();
   const carregaLista = usePegaItensAPI();
-  carregaLista()
+  carregaLista() 
 
   const abrirModalLogin = () => {
     mudarModalLogin()

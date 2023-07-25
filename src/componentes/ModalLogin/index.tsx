@@ -5,9 +5,8 @@ import useAoLogar from 'state/hooks/useAoLogar';
 
 
 function ModalLogin() {
-  const [email, setEmail] = useState('')  
+  const [email, setEmail] = useState('')
   const [senha, setSenha] = useState('')
-  
 
   const aoLogar = useAoLogar();
 
@@ -21,13 +20,13 @@ function ModalLogin() {
   const aoSubmeterLogin = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const usuarioLogin = {
-      email,      
-      senha      
+      email,
+      senha
     }
 
     aoLogar(usuarioLogin);
-    setEmail('');  
-    setEmail('');  
+    setEmail('');
+    setEmail('');
   }
 
   return (
@@ -36,8 +35,20 @@ function ModalLogin() {
         <img src='#' alt='Imagem de Login' />
       </figure>
       <form onSubmit={aoSubmeterLogin}>
-        <LzInput {...variaveisCorFontsize} label='Email' onChange={event => { setEmail(event) }} value={email} type='email'/>
-        <LzInput {...variaveisCorFontsize} label='Senha' onChange={event => { setSenha(event) }} value={senha} type='password' />       
+        <LzInput
+          {...variaveisCorFontsize}
+          label='Email'
+          onChange={event => { setEmail(event) }}
+          value={email}
+          type='email'
+        />
+        <LzInput
+          {...variaveisCorFontsize}
+          label='Senha'
+          onChange={event => { setSenha(event) }}
+          value={senha}
+          type='password'
+        />
         <footer>
           <LzBotao  {...variaveisCorFontsize} forma='gota' >Logar</LzBotao>
         </footer>

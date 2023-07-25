@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { getItens } from 'servicos/itens';
 
 
-export default function useItensMagicos(){
+export default function useItensMagicos() {
     const [itens, setItens] = useState([]);
     async function fetchIntens() {
         const itensAPI = await getItens();
@@ -10,9 +10,9 @@ export default function useItensMagicos(){
     }
 
     useEffect(() => {
-       fetchIntens()
+        fetchIntens()
     }, [])
 
-    return itens; 
-    
+    return itens;
+
 }

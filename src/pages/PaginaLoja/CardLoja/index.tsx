@@ -39,7 +39,7 @@ function CardLoja({ ...item }: ICardItemC) {
         setFoco(false);
     };
 
-    const irParaPagina = (id:number) => {
+    const irParaPagina = (id:string) => {
         ir(`/item/${id}`)
     }
 
@@ -49,7 +49,7 @@ function CardLoja({ ...item }: ICardItemC) {
             className={styles.cardLoja}
             onMouseEnter={hover}
             onMouseLeave={naoHover}
-            onClick={() => irParaPagina(item.id)}
+            onClick={() => irParaPagina(item._id)}
         >
             <FavoritoStyled>{item.favorito ? <AiFillHeart /> : <AiOutlineHeart />}</FavoritoStyled>
             <header>{item.nome}</header>

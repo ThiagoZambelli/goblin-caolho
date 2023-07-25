@@ -7,7 +7,6 @@ export default function useValidaUserCriacao() {
     return (userParaTestar: INovoUsuarioValidacao) => {
         const validado = testaSenha(userParaTestar);
 
-
         const userValidado: INovoUsuario = {
             cep: userParaTestar.cep,
             complemento: userParaTestar.complemento,
@@ -16,7 +15,6 @@ export default function useValidaUserCriacao() {
             nome: userParaTestar.nome,
             senha: userParaTestar.senha
         }
-
         if (validado) {
             return userValidado;
         } else {

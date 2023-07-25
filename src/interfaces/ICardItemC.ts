@@ -1,5 +1,5 @@
 export default interface ICardItemC{
-    id: number,
+    _id: string,
     nome: string,
     raridade: string,
     descricao: string,

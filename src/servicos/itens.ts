@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const itensAPI = axios.create({baseURL:"http://localhost:8000/itens"});
+const itensAPI = axios.create({ baseURL: "https://lithlez-api.onrender.com/item" });
 
-export async function getItens(){
-    const response = await itensAPI.get('/')    
+export async function getItens() {
+    const response = await itensAPI.get('')    
     return response.data
 }

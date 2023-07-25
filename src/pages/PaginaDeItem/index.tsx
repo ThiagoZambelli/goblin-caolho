@@ -20,7 +20,7 @@ interface IFooter {
 
 function PaginaDeItem() {
     const { id } = useParams();
-    const item = usePegaItem(parseInt(id!));
+    const item = usePegaItem(id!);
     const corDaRaridade = useTestaCorPorRaridade(item?.raridade);
 
     return (

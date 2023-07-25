@@ -4,12 +4,40 @@
     background-color: $color-theme-3-rgba;
     background-image: url('assets/dark-wood.png');
 
+    &__ordenador{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        column-gap: 1rem;
+        button{
+            background-color: transparent;
+            font-size: 1.5rem;
+            border: 2px solid $color-theme-2-hex;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            column-gap: 1em;
+            color: $color-theme-2-hex;
+            border-radius: .7em;
+            padding: .3em .5em;
+            box-shadow: 0 0 6px black;
+
+        }
+        .ativo{
+            transform: scale(1.1);
+            background-color: $color-theme-2-hex;
+            color: $color-theme-3-hex;        
+        }
+    }
+
     &__cards{
         padding: 4rem 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        align-items: start;
+        align-items: flex-start;
         
     }
+    
 }

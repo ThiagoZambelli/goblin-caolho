@@ -4,7 +4,7 @@ import { listaItensAPI } from 'state/atom';
 
 
 
-export default function useArmadurasMagicas() {
+export default function useDestaqueArmadurasMagicas() {
     const lista: ICardItemC[] = useRecoilValue(listaItensAPI);;
     const armaduras = lista.filter(item => {
         return item.tipo.includes('Armor' || "armor")

@@ -1,0 +1,24 @@
+@import 'styles/_variaveis.module.scss';
+
+.cardCarrocel{
+    font-size: 1.3rem;
+    background-color: $color-theme-2-hex;
+    padding: 1em;
+    text-align: center;
+    width: 220px;
+    border-radius: 1em;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 9px black;
+    font-family: $fontTextoNormal;
+    color: $color-theme-5-hex;
+    cursor: pointer;
+    transition: .2s;    
+
+    &__inativo{
+        opacity: .6;
+        transform: scale(.9);
+    }
+}

@@ -16,7 +16,7 @@ function ModalCdastro() {
 
   const aoCadastrar = useAoCadastrar();
   const userValidado = useValidaUserCriacao();
-  
+
 
   const variaveisCorFontsize = {
     fontSize: 14,
@@ -36,7 +36,7 @@ function ModalCdastro() {
       cep,
       complemento
     }
-    
+
     const validacao = userValidado(novoUsuario)
 
     validacao && aoCadastrar(validacao);
