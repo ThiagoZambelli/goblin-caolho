@@ -9,11 +9,12 @@ export default function useAoCadastrar() {
     const validaUser = useValidaUserCriacao();
     const abrirModal = useAbrirModalCadastro();
 
-    return async (userData:INovoUsuarioValidacao) => {
+    return async (userData: INovoUsuarioValidacao) => {
         const userValidado = validaUser(userData);
         try {
-            if(userValidado) {
-                await postUser(userValidado);
+            if (userValidado) {
+                const menssagem = await postUser(userValidado);
+                alert(await menssagem.menssage);
                 abrirModal();
             } else {
                 alert("Erro ao validar o Usuario. Dados Incorretos.")
@@ -21,7 +22,7 @@ export default function useAoCadastrar() {
         } catch (err) {
             console.log(err)
 
-        };        
+        };
     }
 }
 
