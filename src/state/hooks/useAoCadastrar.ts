@@ -15,7 +15,9 @@ export default function useAoCadastrar() {
             if (userValidado) {
                 const menssagem = await postUser(userValidado);
                 alert(await menssagem.menssage);
-                abrirModal();
+                if (menssagem.menssage !== "Email ja Cadastrado!") {
+                    abrirModal();
+                }
             } else {
                 alert("Erro ao validar o Usuario. Dados Incorretos.")
             }
