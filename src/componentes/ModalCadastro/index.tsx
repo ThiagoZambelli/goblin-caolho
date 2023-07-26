@@ -3,7 +3,6 @@ import { useState } from 'react';
 import imagemLogin from './assets/cadastro.png';
 import styles from './ModalCadastro.module.scss';
 import useAoCadastrar from 'state/hooks/useAoCadastrar';
-import useValidaUserCriacao from 'state/hooks/useValidaUserCriacao';
 
 function ModalCdastro() {
   const [nome, setNome] = useState('')
@@ -15,7 +14,6 @@ function ModalCdastro() {
   const [cep, setCep] = useState('')
 
   const aoCadastrar = useAoCadastrar();
-  const userValidado = useValidaUserCriacao();
 
 
   const variaveisCorFontsize = {
@@ -36,10 +34,7 @@ function ModalCdastro() {
       cep,
       complemento
     }
-
-    const validacao = userValidado(novoUsuario)
-
-    validacao && aoCadastrar(validacao);
+    aoCadastrar(novoUsuario);
 
     setNome('')
     setEmail('')
