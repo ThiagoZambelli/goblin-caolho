@@ -5,6 +5,13 @@
     background-color: $color-theme-1-hex;
     background-image: url('assets/stardust.png');
     box-shadow: 0 0 6px black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    img{
+        padding: 2rem 1rem;
+    }
 
     header {
         display: flex;

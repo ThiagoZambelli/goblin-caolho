@@ -9,13 +9,20 @@
     border-radius: 1em;
     min-height: 100px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 9px black;
     font-family: $fontTextoNormal;
     color: $color-theme-5-hex;
     cursor: pointer;
-    transition: .2s;    
+    transition: .2s;
+    
+    img{
+        padding: 1rem;
+        max-width:150px;
+        max-height: 150px;        
+    }
 
     &__inativo{
         opacity: .6;
