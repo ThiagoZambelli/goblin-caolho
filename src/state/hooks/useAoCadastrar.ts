@@ -11,21 +11,21 @@ export default function useAoCadastrar() {
 
     return async (userData: INovoUsuarioValidacao) => {
         const userValidado = validaUser(userData);
-        try {
-            if (userValidado) {
+        if (userValidado) {
+            try {
                 const menssagem = await postUser(userValidado);
-                alert(await menssagem.menssage);
-                console.log(await menssagem.menssage);
-                if (menssagem.menssage !== "Email ja Cadastrado!") {
+                alert(menssagem?.data.menssage)                
+                if(menssagem?.status === 201){
                     abrirModal();
                 }
-            } else {
-                alert("Erro ao validar o Usuario. Dados Incorretos.")
             }
-        } catch (err) {
-            console.log(err)
+            catch (err) {
 
-        };
+            }
+
+        } else {
+            alert("Erro ao validar o Usuario. Dados Incorretos.")
+        }
     }
 }
 
