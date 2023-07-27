@@ -1,6 +1,6 @@
 @import 'styles/_variaveis.module.scss';
 
-.cardCarrocel{
+.cardCarrocel {
     font-size: 1.3rem;
     background-color: $color-theme-2-hex;
     padding: 1em;
@@ -12,20 +12,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 9px black;
+    box-shadow: 0 0 12px $color-theme-5-hex;
     font-family: $fontTextoNormal;
     color: $color-theme-5-hex;
     cursor: pointer;
     transition: .2s;
-    
-    img{
+
+    img {
         padding: 1rem;
-        max-width:150px;
-        max-height: 150px;        
+        max-width: 150px;
+        max-height: 150px;
     }
 
-    &__inativo{
+    &__inativo {
         opacity: .6;
         transform: scale(.9);
+        border-radius: 50%;
+        box-shadow:
+            4px 4px $color-theme-5-hex,
+            -4px -4px $color-theme-3-hex,
+            0px 0px 12px black;
     }
 }

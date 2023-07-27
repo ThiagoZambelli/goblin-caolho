@@ -23,7 +23,9 @@ function Carrocel({ listaCards, titulo }: CarrocelProps) {
 
     return (
         <section className={styles.carrocel}>
-            <h1 className={styles.carrocel__titulo}>{titulo}</h1>
+            <div className={styles.carrocel__titulo}>
+                <h1 >{titulo}</h1>
+            </div>
             <div className={styles.carrocel__container}>
                 <section className={styles.carrocel__cards}>
                     {listaCards.map(item => {
