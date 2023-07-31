@@ -7,6 +7,7 @@ import useFiltrosLista from 'state/hooks/useFiltrosLista';
 import ICardItemC from 'interfaces/ICardItemC';
 import { TbSortAscendingLetters } from 'react-icons/tb'
 import { SiCurseforge } from 'react-icons/si'
+import Loader from 'componentes/Loader';
 
 
 function PaginaLoja() {
@@ -62,9 +63,9 @@ function PaginaLoja() {
         ><SiCurseforge /></button>
       </section>
       <section className={styles.paginaLoja__cards}>
-        {listaFiltrada.length > 0 && listaFiltrada.map(item => {
+        {listaFiltrada.length > 0 ? listaFiltrada.map(item => {
           return (<CardLoja key={item._id} {...item} />)
-        })}
+        }) : <Loader />}
       </section>
     </main>
   )
